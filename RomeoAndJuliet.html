@@ -1,0 +1,411 @@
+
+<!DOCTYPE html><html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport"
+              content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"><meta name="csrf-param" content="_csrf"><meta name="csrf-token" content="NjM2NGQzZjBmNDk1YjZhYjlkY2Y4ZDNiNWM2ZTBiMDEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="><!-- TODO: Meta --><meta name="title" content="Read Against the Gods - Chapter 1721 - Blood-soaked Eternal Heaven (3) online free - Novel Full"><meta name="description" content="Read Against the Gods - Chapter 1721 - Blood-soaked Eternal Heaven (3) online free from your Mobile, Table, PC... Novel Updates Daily "><meta name="image" content="https://novelfull.com/uploads/thumbs/against-the-gods-f4e50e3f24-e2c2bc3176ed512cdb978f2a55e91a22.jpg"><meta name="keywords" content="Against the Gods - Chapter 1721 - Blood-soaked Eternal Heaven (3)"><title>Read Against the Gods - Chapter 1721 - Blood-soaked Eternal Heaven (3) online free - Novel Full</title><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic" rel='stylesheet' type='text/css'><link rel="shortcut icon" href="/web/images/favicon.ico" type="image/x-icon"><link rel="icon" href="/web/images/favicon.ico" type="image/x-icon"><!--[if lt IE 9]><link rel="stylesheet" href="/web/css/iefix.css"><script src="/web/js/html5shiv.min.js"></script><script src="/web/js/respond.min.js"></script><![endif]--><script type="text/javascript">
+            var ajaxSearchUrl = 'https://novelfull.com/ajax-search';
+            var ajaxNovelRateUrl = 'https://novelfull.com/ajax-novel-rate';
+            var ajaxReportChapterUrl = 'https://novelfull.com/ajax-report-chapter';
+            var ajaxUserSettingsUrl = 'https://novelfull.com/ajax-user-settings';
+            var ajaxChapterOptionUrl = 'https://novelfull.com/ajax-chapter-option';
+        </script><script type="text/javascript" src="/web/js/plugins.js"></script><script type="text/javascript" src="/web/js/common.js"></script><script type="text/javascript" src="/web/js/scripts.js?v=1"></script><!-- TODO: ExtraScript --><script type="text/javascript">
+        $(document).ready(function() {
+            $navBar = $('.toggle-nav-open');
+            $navBar.on('click', function() {
+                var open = $(this).hasClass('active') ? 'close' : 'open';
+                changeStyle('nav-bar', open);
+                saveStyle('nav-bar', open);
+                $('header').toggle();
+                $('.navbar-breadcrumb').toggle();
+            });
+
+            // Key for the chapter navigation
+            $nextChap = $('#next_chap');
+            $prevChap = $('#prev_chap');
+            $(document).keydown(function (e) {
+                var tag = e.target.tagName.toLowerCase();
+                if (tag == 'input' || tag == 'textarea') return;
+
+                var keypress = e.charCode ? e.charCode : e.keyCode;
+                if (keypress == 39 || keypress == 68) {
+                    if (!$nextChap.attr('disabled')) {
+                        window.location = $nextChap.attr('href');
+                    }
+                } else if (keypress == 37 || keypress == 65) {
+                    if (!$prevChap.attr('disabled')) {
+                        window.location = $prevChap.attr('href');
+                    }
+                }
+            });
+
+            // TODO: Theme
+            $container = $('#container');
+            $chapter = $('#chapter');
+            $chapterContent = $('#chapter-content');
+            var chapterContent = $chapterContent.html();
+            $options = $('#options');
+            $options.show();
+            $optionBackground = $('#option-background');
+            $optionFontFamily = $('#option-font-family');
+            $optionFontSize = $('#option-font-size');
+            $optionLineHeight = $('#option-line-height');
+            $optionFluidSwitch = $('input[type=radio][name=fluid-switch]');
+            $optionNoLineBreak = $('input[type=radio][name=onebreak-switch]');
+            $optionBackground.on('change', function() {
+                changeStyle('background', $(this).val());
+                saveStyle('background', $(this).val());
+            });
+            $optionFontFamily.on('change', function() {
+                changeStyle('font-family', $(this).val());
+                saveStyle('font-family', $(this).val());
+            });
+            $optionFontSize.on('change', function() {
+                changeStyle('font-size', $(this).val());
+                saveStyle('font-size', $(this).val());
+            });
+            $optionLineHeight.on('change', function() {
+                changeStyle('line-height', $(this).val());
+                saveStyle('line-height', $(this).val());
+            });
+            $optionFluidSwitch.on('change', function() {
+                changeStyle('fluid-switch', $(this).val());
+                saveStyle('fluid-switch', $(this).val());
+            });
+            $optionNoLineBreak.on('change', function() {
+                changeStyle('onebreak-switch', $(this).val());
+                saveStyle('onebreak-switch', $(this).val());
+            });
+
+            function changeStyle(style, value) {
+                if (!value) return;
+                switch (style) {
+                    case "background":
+                        $container.css('background-color', value);
+                        if (value == '#232323') {
+                            $container.addClass('dark-background');
+                        } else {
+                            $container.removeClass('dark-background');
+                        }
+                        break;
+                    case "font-family":
+                        $chapterContent.css('font-family', value);
+                        break;
+                    case "font-size":
+                        $chapterContent.css('font-size', value);
+                        break;
+                    case "line-height":
+                        $chapterContent.css('line-height', value);
+                        break;
+                    case "nav-bar":
+                        if ( value == 'open' ) {
+                            $('body').addClass('toggleNav');
+                            $('#container').addClass('active');
+                            $navBar.find('.glyphicon').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+                            $navBar.addClass('active');
+                        } else {
+                            $navBar.removeClass('active');
+                            $('#container').removeClass('active');
+                            $navBar.find('.glyphicon').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
+                            $('body').removeClass('toggleNav');
+                        }
+                        break;
+                    case "fluid-switch":
+                        if (value == 'yes') {
+                            $chapter.removeClass('container');
+                            $chapter.addClass('container-fluid');
+                        } else {
+                            $chapter.addClass('container');
+                            $chapter.removeClass('container-fluid');
+                        }
+                        break;
+                    case "onebreak-switch":
+                        if (value == 'yes') {
+                            $chapterContent.html(removeLineBreak($chapterContent.html()));
+                        } else {
+                            $chapterContent.html(addLineBreak(chapterContent));
+                        }
+                        break;
+                }
+            }
+
+            function saveStyle(style, value) {
+                // Save to cookies
+                var chapterStyle = getStyle();
+
+                switch (style) {
+                    case "background":
+                        chapterStyle.background = value;
+                        break;
+                    case "font-family":
+                        chapterStyle.fontFamily = value;
+                        break;
+                    case "font-size":
+                        chapterStyle.fontSize = value;
+                        break;
+                    case "line-height":
+                        chapterStyle.lineHeight = value;
+                        break;
+                    case "nav-bar":
+                        chapterStyle.navBar = value;
+                        break;
+                    case "fluid-switch":
+                        chapterStyle.fluidSwitch = value;
+                        break;
+                    case "onebreak-switch":
+                        chapterStyle.onebreakSwitch = value;
+                        break;
+                }
+                var expDate = new Date();
+                expDate.setTime(expDate.getTime() + (7 * 24 * 60 * 60 * 1000));
+                $.cookie("chapter_style", JSON.stringify(chapterStyle), {path: '/', expires: expDate});
+                var settings = {
+                    style: chapterStyle
+                };
+                $.ajax({
+                    method: "POST",
+                    url: ajaxUserSettingsUrl,
+                    data: {
+                        settings: JSON.stringify(settings)
+                    }
+                }).done(function (data) {
+                    console.log(data);
+                });
+            }
+
+            function addLineBreak(content) {
+                var delimiter = '</p>';
+                if (content.indexOf(delimiter) == -1 || content.indexOf('<br/>') > 5 || content.indexOf('<br>') > 5) {
+                    delimiter = '<br/>';
+                    if (content.indexOf(delimiter) == -1) {
+                        delimiter = '<br>';
+                    }
+                }
+                var contentArray = content.split(delimiter);
+                if (contentArray.length == 1) return content;
+                var newContent = '';
+                for (var i in contentArray) {
+                    var contentItem = contentArray[i].trim();
+                    if (contentItem != '<p>') {
+                        newContent += contentItem;
+                        newContent += '<br>';
+                    } 
+                }
+                newContent = newContent.replace(/(<br\s*\/?>){1,}/gi, '<br>');
+                newContent = newContent.replace(/<p><br><br><\/p>/gi, '');
+                return newContent;
+            }
+
+            function removeLineBreak(content) {
+                var newContent = content;
+                newContent = newContent.replace(/(<br\s*\/?>){1,}/gi, '');
+                return newContent;
+            }
+
+            function getStyle() {
+                var chapterStyle = $.cookie("chapter_style");
+                if (chapterStyle) {
+                    chapterStyle = JSON.parse(chapterStyle);
+                } else {
+                    chapterStyle = {};
+                }
+                if (!chapterStyle.background) chapterStyle.background = "#F4F4F4";
+                if (!chapterStyle.fontFamily) chapterStyle.fontFamily = "Arial, sans-serif";
+                if (!chapterStyle.fontSize) chapterStyle.fontSize = "18px";
+                if (!chapterStyle.lineHeight) chapterStyle.lineHeight = "160%";
+                if (!chapterStyle.fluidSwitch) chapterStyle.fluidSwitch = 'no';
+                if (!chapterStyle.onebreakSwitch) chapterStyle.onebreakSwitch = 'no';
+                if (!chapterStyle.navBar) chapterStyle.navBar = 'close';
+                return chapterStyle;
+            }
+
+            var chapterStyle = getStyle();
+            $optionBackground.val(chapterStyle.background);
+            $optionFontFamily.val(chapterStyle.fontFamily);
+            $optionFontSize.val(chapterStyle.fontSize);
+            $optionLineHeight.val(chapterStyle.lineHeight);
+            if (chapterStyle.navBar == 'open') {
+                //$('body').addClass('toggleNav');
+//                $('#container').addClass('active');
+//                $navBar.find('.glyphicon').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+//                $navBar.addClass('active');
+//                $('header').hide();
+//                $('.navbar-breadcrumb').hide();
+            }
+            $optionFluidSwitch.val([chapterStyle.fluidSwitch]);
+            $optionNoLineBreak.val([chapterStyle.onebreakSwitch]);
+            //changeStyle('onebreak-switch', chapterStyle.onebreakSwitch);
+
+            // TODO: Chapter Nav
+            $('.chapter_jump').on('change', function() {
+                window.location = $(this).val();
+            });
+
+            // TODO: Novel history
+            var novel = {
+                id: 62,
+                name: 'Against the Gods',
+                url: '/against-the-gods.html',
+                chapter: {
+                    id: 896061,
+                    name: 'Chapter 1721 - Blood-soaked Eternal Heaven (3)',
+                    url: '/against-the-gods/chapter-1721-blood-soaked-eternal-heaven-3.html',
+                }
+            };
+
+            jQuery(document).ready(function () {
+                var limit = 10;
+                var novels = $.cookie("novels_history");
+                if (novels) novels = JSON.parse(novels);
+                else novels = [];
+
+                for (var i in novels) {
+                    var nv = novels[i];
+                    if (nv.id == novel.id) {
+                        novels.splice(i, 1);
+                        break;
+                    }
+                }
+
+                if (novels.length == limit) {
+                    novels.splice(-1,1);
+                }
+                novels.unshift(novel);
+
+                var expDate = new Date();
+                expDate.setTime(expDate.getTime() + (7 * 24 * 60 * 60 * 1000));
+                $.cookie("novels_history", JSON.stringify(novels), {path: '/', expires: expDate});
+            });
+
+            $('#chapter_error').on('click', function() {
+                console.log('chapter_error');
+                var reason = prompt("Please describe error", "");
+                if (reason != null) {
+                    $.ajax({
+                        method: "GET",
+                        url: ajaxReportChapterUrl,
+                        data: {
+                            chapter: $(this).data('chapter-id'),
+                            reason: reason
+                        }
+                    }).done(function (data) {
+                        console.log(data);
+                    });
+                    alert('Thanks report');
+                }
+            });
+
+            chapterJump(novel.id, novel.chapter.id, novel.chapter.url);
+        });
+    </script><link rel="stylesheet" href="/web/css/style.css"><link rel="stylesheet" href="/web/css/rateit.css"><link rel="stylesheet" href="/web/css/custom.css?v=1"><link rel="stylesheet" href="/web/css/responsive.css?v=1"></head><body><div id="wrapper"><header class="header" style="display: block"><div class="navbar navbar-default navbar-static-top" role="navigation" id="nav"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Show menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><h5><a class="header-logo" href="/"
+                           title="Read novel online"><img src="/uploads/thumbs/banner-75b2b7a774-16ecfc7149d2c21507bcde60e1c1a073.png"></a></h5></div><div class="navbar-collapse collapse"><ul class="control nav navbar-nav "><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" title=""><span class="glyphicon glyphicon-list"></span> Novel List <span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li><a href="/latest-release-novel"
+                                       title="Latest Release">Latest Release</a></li><li><a href="/hot-novel"
+                                       title="Hot Novel">Hot Novel</a></li><li><a href="/completed-novel"
+                                       title="Completed Novel">Completed Novel</a></li><li><a href="/most-popular"
+                                       title="Most Popular">Most Popular</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" title=""><span class="glyphicon glyphicon-list"></span> Genre <span class="caret"></span></a><div class="dropdown-menu multi-column"><div class="row"><div class="col-md-4"><ul class="dropdown-menu"><li><a href="/genre/Shounen"
+                                                       title="Shounen">Shounen</a></li><li><a href="/genre/Harem"
+                                                       title="Harem">Harem</a></li><li><a href="/genre/Comedy"
+                                                       title="Comedy">Comedy</a></li><li><a href="/genre/Martial+Arts"
+                                                       title="Martial Arts">Martial Arts</a></li><li><a href="/genre/School+Life"
+                                                       title="School Life">School Life</a></li><li><a href="/genre/Mystery"
+                                                       title="Mystery">Mystery</a></li><li><a href="/genre/Shoujo"
+                                                       title="Shoujo">Shoujo</a></li><li><a href="/genre/Romance"
+                                                       title="Romance">Romance</a></li><li><a href="/genre/Sci-fi"
+                                                       title="Sci-fi">Sci-fi</a></li><li><a href="/genre/Gender+Bender"
+                                                       title="Gender Bender">Gender Bender</a></li><li><a href="/genre/Mature"
+                                                       title="Mature">Mature</a></li><li><a href="/genre/Fantasy"
+                                                       title="Fantasy">Fantasy</a></li></ul></div><div class="col-md-4"><ul class="dropdown-menu"><li><a href="/genre/Horror"
+                                                       title="Horror">Horror</a></li><li><a href="/genre/Drama"
+                                                       title="Drama">Drama</a></li><li><a href="/genre/Tragedy"
+                                                       title="Tragedy">Tragedy</a></li><li><a href="/genre/Supernatural"
+                                                       title="Supernatural">Supernatural</a></li><li><a href="/genre/Ecchi"
+                                                       title="Ecchi">Ecchi</a></li><li><a href="/genre/Xuanhuan"
+                                                       title="Xuanhuan">Xuanhuan</a></li><li><a href="/genre/Adventure"
+                                                       title="Adventure">Adventure</a></li><li><a href="/genre/Action"
+                                                       title="Action">Action</a></li><li><a href="/genre/Psychological"
+                                                       title="Psychological">Psychological</a></li><li><a href="/genre/Xianxia"
+                                                       title="Xianxia">Xianxia</a></li><li><a href="/genre/Wuxia"
+                                                       title="Wuxia">Wuxia</a></li><li><a href="/genre/Historical"
+                                                       title="Historical">Historical</a></li></ul></div><div class="col-md-4"><ul class="dropdown-menu"><li><a href="/genre/Slice+of+Life"
+                                                       title="Slice of Life">Slice of Life</a></li><li><a href="/genre/Seinen"
+                                                       title="Seinen">Seinen</a></li><li><a href="/genre/Lolicon"
+                                                       title="Lolicon">Lolicon</a></li><li><a href="/genre/Adult"
+                                                       title="Adult">Adult</a></li><li><a href="/genre/Josei"
+                                                       title="Josei">Josei</a></li><li><a href="/genre/Sports"
+                                                       title="Sports">Sports</a></li><li><a href="/genre/Smut"
+                                                       title="Smut">Smut</a></li><li><a href="/genre/Mecha"
+                                                       title="Mecha">Mecha</a></li><li><a href="/genre/Yaoi"
+                                                       title="Yaoi">Yaoi</a></li><li><a href="/genre/Shounen+Ai"
+                                                       title="Shounen Ai">Shounen Ai</a></li></ul></div></div></div></li><li class="dropdown" id="options"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"
+                               aria-expanded="false"><span class="glyphicon glyphicon-cog"></span> Options <span
+                                    class="caret"></span></a><div class="dropdown-menu dropdown-menu-right settings"><form class="form-horizontal"><div class="form-group form-group-sm"><label class="col-sm-2 col-md-5 control-label" for="truyen-background">Background</label><div class="col-sm-5 col-md-7"><select class="form-control" id="option-background"><option value="#F4F4F4">Light gray</option><option value="#E9EBEE">Light blue</option><option value="#F4F4E4">Light yellow</option><option value="#EAE4D3">Sepia</option><option value="#D5D8DC">Dark blue</option><option value="#FAFAC8">Dark yellow</option><option value="#EFEFAB">Wood grain</option><option value="#FFF">White</option><option value="#232323">Dark</option></select></div></div><div class="form-group form-group-sm"><label class="col-sm-2 col-md-5 control-label"
+                                               for="font-chu">Font family</label><div class="col-sm-5 col-md-7"><select class="form-control"
+                                                                               id="option-font-family"><option value="'Palatino Linotype', serif">Palatino Linotype</option><option value="Bookerly, serif">Bookerly</option><option value="Minion, serif">Minion</option><option value="'Segoe UI', sans-serif">Segoe UI</option><option value="Roboto, sans-serif">Roboto</option><option value="'Roboto Condensed', sans-serif">Roboto Condensed</option><option value="'Patrick Hand', sans-serif">Patrick Hand</option><option value="'Noticia Text', sans-serif">Noticia Text</option><option value="'Times New Roman', serif">Times New Roman</option><option value="Verdana, sans-serif">Verdana</option><option value="Tahoma, sans-serif">Tahoma</option><option value="Arial, sans-serif">Arial</option></select></div></div><div class="form-group form-group-sm"><label class="col-sm-2 col-md-5 control-label" for="size-chu">Font size</label><div class="col-sm-5 col-md-7"><select class="form-control" id="option-font-size"><option value="16px">16</option><option value="18px">18</option><option value="20px">20</option><option value="22px">22</option><option value="24px">24</option><option value="26px">26</option><option value="28px">28</option><option value="30px">30</option><option value="32px">32</option><option value="34px">34</option><option value="36px">36</option><option value="38px">38</option><option value="40px">40</option></select></div></div><div class="form-group form-group-sm"><label class="col-sm-2 col-md-5 control-label" for="line-height">Line
+                                            height</label><div class="col-sm-5 col-md-7"><select class="form-control" id="option-line-height"><option value="100%">100%</option><option value="120%">120%</option><option value="140%">140%</option><option value="160%">160%</option><option value="180%">180%</option><option value="200%">200%</option></select></div></div><div class="form-group form-group-sm"><label class="col-sm-2 col-md-5 control-label">Full frame</label><div class="col-sm-5 col-md-7"><label class="radio-inline" for="fluid-yes"><input type="radio" name="fluid-switch" id="fluid-yes" value="yes"> Yes</label><label class="radio-inline" for="fluid-no"><input type="radio" name="fluid-switch" id="fluid-no" value="no"
+                                                       checked=""> No</label></div></div><div class="form-group form-group-sm"><label class="col-sm-2 col-md-5 control-label">No line break</label><div class="col-sm-5 col-md-7"><label class="radio-inline" for="onebreak-yes"><input type="radio" name="onebreak-switch" id="onebreak-yes"
+                                                       value="yes"> Yes</label><label class="radio-inline" for="onebreak-no"><input type="radio" name="onebreak-switch" id="onebreak-no" value="no"
+                                                       checked=""> No</label></div></div></form></div></li></ul><form class="navbar-form navbar-right"
+                          action="/search"><div class="input-group search-holder"><input class="form-control" id="search-input" type="search"
+                                   name="keyword" placeholder="Search..."
+                                   value=""><div class="input-group-btn"><button class="btn btn-default" type="submit"><span
+                                        class="glyphicon glyphicon-search"></span></button></div></div><div class="list-group list-search-res hide"></div></form><div id="login-status" class="hide"></div></div><!--/.nav-collapse --></div></div></header><main id="container" class=" "
+          style="background-color: #F4F4F4"><div class="navbar-breadcrumb" style="display: block"><div class="container breadcrumb-container"><ol class="breadcrumb"><li><a href=""><span class="glyphicon glyphicon-home"></span></a><a href="/" title="Read novel online"><span>Novel</span></a></li><li><h1><a href="/against-the-gods.html" title="Against the Gods"><span>Against the Gods</span></a></h1></li><li class="active"><a href="/against-the-gods/chapter-1721-blood-soaked-eternal-heaven-3.html"
+                       title="Chapter 1721 - Blood-soaked Eternal Heaven (3)"><span>Chapter 1721 - Blood-soaked Eternal Heaven (3)</span></a></li></ol></div></div><div id="chapter" class="chapter container"><div class="row"><div class="col-xs-12"><a class="truyen-title" href="/against-the-gods.html" title="Against the Gods">Against the Gods</a><h2><a class="chapter-title" href="/against-the-gods/chapter-1721-blood-soaked-eternal-heaven-3.html" title="Chapter 1721 - Blood-soaked Eternal Heaven (3)"><span class="chapter-text">Chapter 1721 - Blood-soaked Eternal Heaven (3)<span></a></h2><hr class="chapter-start"><button type="button" class="btn btn-responsive btn-success toggle-nav-open "><span class="glyphicon glyphicon-menu-up"></span></button><div class="chapter-nav" id="chapter-nav-top"><div class="btn-group"><a class="btn btn-success" href="/against-the-gods/chapter-1720-blood-soaked-eternal-heaven-2.html"
+           title="Chapter 1720 - Blood-soaked Eternal Heaven (2)"
+           id="prev_chap"><span class="glyphicon glyphicon-chevron-left"></span><span class="hidden-xs">Prev Chapter</span></a><button type="button" class="btn btn-success chapter_jump"><span class="glyphicon glyphicon-list-alt"></span></button><a class="btn btn-success" disabled id="next_chap"><span class="hidden-xs">Next Chapter</span><span class="glyphicon glyphicon-chevron-right"></span></a></div></div><hr class="chapter-end"><div id="chapter-content" class="chapter-c" style="font-family: Arial, sans-serif, serif; font-size: 18px; line-height: 160%;"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- full thich ung --><ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2371791870283090"
+     data-ad-slot="2009706278"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins><script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><p></p><p></p><p><span>An unbelievable number of terrifying devilish auras erupted from the center and the south side of the Eastern Divine Region all at once. They distorted all space and devoured all light around them without question.</span></p><p></p><p><span>A decrepit-looking profound ark that could accommodate several hundred thousand profound practitioners at most rose from the south of the Easten Divine Region. The profound ark itself looked like an ordinary profound ark, but not so the person floating out of a black mist.</span></p><p></p><p><span>It was none other than the Yama Emperor himself, Yan Tianxiao!</span></p><p></p><p><span>&#x201C;Kill!&#x201D;</span></p><p></p><p><span>And so began the creation of an endless sea of corpses.</span></p><p></p><p><span>All around him, the Yama Devils, Yama Ghosts, and Yama Soldiers rushed toward the shaking realms in front of them.</span></p><p></p><p><span>On the other side, the Witches, Soul Spirits and Soul Servants led by First Witch Jie Xin and Jie Ling also bared their dark fangs against their enemies.</span></p><p></p><p><span>Tian Muyi of the Imperial Heaven Realm, Huo Tianxing of the Desolate Calamity Realm, the Great Viper Sage of the Divine Python Realm...</span></p><p></p><p><span>All the &#x201C;footholds&#x201D; on Chi Wuyao and Qianye Ying&#x2019;er&#x2019;s projection transformed into a destructive whirlpool of darkness all at once.</span></p><p></p><p><span>The lower and middle star realms to the north of the Eastern Divine Region were overcome one by one, which kept everyone&#x2019;s eyes focused on them. Exceeding all expectations, the dark profound practitioners of the king and most of the upper star realms had successfully infiltrated the central and southern regions of the Eastern Divine Region.</span></p><p></p><p><span>There were countless devils inside the refugees&#x2019; profound arks that were escaping from the northern realms.</span></p><p></p><p><span>But not one person had noticed them until it was too late.</span></p><p></p><p><span>It was easy to identify a devil person. Their aura was so chaotic that they themselves couldn&#x2019;t keep it under control. Therefore, it was impossible for one to conceal themselves for long, much less an entire group of devil people.</span></p><p></p><p><span>That fact had been true for millions of years; since the day the God Realm itself was founded. It was just common sense.</span></p><p></p><p><span>And there was nothing scarier and less defensible than something that transcended common sense.</span></p><p></p><p><span>This was the true start of the devil calamity.</span></p><p></p><p><span>The earth of countless realms was instantly dyed with darkness and blood.</span></p><p></p><p><span>The Eternal Heaven Realm had just transferred the core strength of over a hundred and forty upper star realms to the north to deal with the attacks. Even the realm kings had answered the call to arms and departed their realms. As a result, the southern region was left mostly empty and unguarded.</span></p><p></p><p><span>That was the moment the dark forces of two of the Northern Divine Region king realms struck!</span></p><p></p><p><span>The true nightmare descended when Yun Che&#x2019;s &#x201C;Voice of Eternal Heaven&#x201D; spread across all of the Eastern Divine Region.</span></p><p></p><p><span>&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;...</span></p><p></p><p><span>Meanwhile, in the Eternal Heaven God Realm, everyone was alarmed after their most important grand teleportation formation was destroyed, and three absolutely terrifying auras of darkness had erupted from three different directions. The Guardians, the Eternal Heaven Elders, the Adjudicators and everyone else had rushed out of their palaces and halls immediately to investigate them.</span></p><p></p><p><span>Honorable Tai Yu was staring toward the front without moving a muscle. His pupils were shrinking, and his scalp was tingling like never before.</span></p><p></p><p><span>It was because he couldn&#x2019;t believe how powerful the fiendish energies were.</span></p><p></p><p><span>Not only were they all god emperors, even the weakest among them&#x2026; was as strong as the Eternal Heaven God Emperor himself, if not stronger! </span></p><div class="ads ads-holder ads-middle text-center"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2371791870283090"
+     data-ad-slot="8264086020"></ins><script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><p></p><p><span>Three god emperors!? </span></p><p></p><p><span>How was this possible? Where did they come from!? And how long had they been lurking inside the Eternal Heaven Realm??</span></p><p></p><p><span>The last thought raging in his mind was the worst of all. All three god emperors&#x2014;so powerful that he was positively shaking from fear&#x2014;had appeared directly inside their borders, so it was too late even if he were to activate their strongest sealing barrier right now.</span></p><p></p><p><span>The Eternal Heaven Bell rang without warning, and Honorable Tai Yu&#x2019;s already ugly expression turned a new shade of purple. He immediately turned around and rushed toward the heart of the god realm.</span></p><p></p><p><span>It was there he saw a pitch-black figure turning around to face him.</span></p><p></p><p><span>&#x201C;Yun&#x2026; Che&#x2026;&#x201D; Honorable Tai Yu muttered and experienced an instantaneous flashback.</span></p><p></p><p><span>He had sensed Yun Che&#x2019;s aura back at the borders of the Northern Divine Region; back when Zhou Qingchen died, and he had to physically drag Zhou Xuzi away or risk losing his god emperor. However, since he hadn&#x2019;t caught a full glimpse of the young man&#x2019;s appearance at the time, this was technically their first meeting after the end of the crimson calamity.</span></p><p></p><p><span>It felt like it had been ages since the last time he had seen Yun Che.</span></p><p></p><p><span>In his memory, Yun Che&#x2019;s eyes were as clear as water. When facing his elders, his gaze was gentle and respectful. When he was fighting on the Conferred God Stage, his eyes were filled with so much determination that it moved anyone&#x2019;s heart&#x2026; he especially remembered the time he had faced the Heaven Smiting Devil Emperor alone at the edge of the Primal Chaos. No youngster of this era had shone as brightly as this young man did at that time.</span></p><p></p><p><span>Today, Yun Che&#x2019;s black hair was floating behind him with unseen power; every strand infused with unimaginable darkness. His smile was dark and sinister, and his eyes&#x2026; were almost the scariest pools of the abyss he had ever seen in his life.</span></p><p></p><p><span>The young man&#x2019;s aura was that of a level ten Divine Sovereign, but his entire body felt as cold as ice.</span></p><p></p><p><span>&#x201C;Moon&#x2026; Splitting&#x2026; Cascade!&#x201D; Tai Yu muttered to himself. That was the one way Yun Che could&#x2019;ve slipped in without anyone noticing.</span></p><p></p><p><span>Even so, they were a king realm, and they had allowed a Divine Sovereign&#x2014;a dark Divine Sovereign no less&#x2014;to sneak all the way to their core without being detected. It was humiliating to say the least.</span></p><p></p><p><span>Honorable Tai Yu raised his hand as a pale white ring of energy appeared between his fingers. The vast power of a level ten Divine Master immediately descended upon Yun Che.</span></p><p></p><p><span>But all the young man had to offer the strongest Guardian of the Eternal Heaven Realm was an eerie, incomprehensible smile. He raised an arm to reveal a red, pocket-sized profound ark in his palm. Then, he flicked it into the air and watched it morph into a thirty-thousand-meter long giant that blocked the sun.</span></p><p></p><p><span>Honorable Tai Yu automatically looked up. Then, his eyes widened as if someone had shone a million rays of piercing light at it.</span></p><p></p><p><span>Qianye Ying&#x2019;er was the first person to jump out of the entrance of the Primordial Profound Ark, the Divine Oracle lashing toward Honorable Tai Yu like a golden snake.</span></p><p></p><p><span>Behind her, the Moon Eaters, Burning Moon Divine Envoys, and Burning Moon Guards led by Fen Daoqi rushed out and formed a gigantic, despairing curtain of darkness that blotted out the sky itself.</span></p><p></p><p><span>The full strength of the Burning Moon Realm had descended upon the Eternal Heaven God Realm.</span></p><p></p><p><span>In that moment, the shock Honorable Tai Yu and the rest of the denizens of the Eternal Heaven Realm experienced was almost enough to kill them on the spot.</span></p><div class="ads ads-holder ads-middle text-center"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2371791870283090"
+     data-ad-slot="8264086020"></ins><script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><p></p><p><span>Beneath the darkness, the Devil Master&#x2019;s voice sounded crueler and more ruthless than even a true devil&#x2019;s. &#x201C;Kill them all. Every man&#x2026; every beast&#x2026; every plant&#x2026; All. Must. Die!&#x201D;</span></p><p></p><p><span>The devil people of the Burning Moon Realm didn&#x2019;t verbally respond to his command. They simply unleashed the darkness, the violence and the anger they had been withholding for countless generations toward the shaking creatures beneath their feet.</span></p><p></p><p><span>BOOM&#x2014; </span></p><p></p><p><span>An instant was all it took to turn the most sacred land of the Eastern Divine Region into a bloody, smoking battlefield.</span></p><p></p><p><span>The inheritors of the Eternal Heaven Realm&#x2019;s immortal power were called &#x201C;Guardians&#x201D; for a reason. It was because they hadn&#x2019;t just inherited the power, but also the will to protect Eternal Heaven Realm, the Eastern Divine Region and justice!</span></p><p></p><p><span>Not only that, the Guardians weren&#x2019;t the only ones who carried out this will, it also included all the denizens of the Eternal Heaven Realm.</span></p><p></p><p><span>The moment of shock only lasted an instant. When blood was spilled across the sacred lands of the Eternal Heaven Realm, when the familiar faces they once knew were blasted to bits right before their eyes, their belief immediately transformed them into ferocious beasts that would do everything to protect what was important to them.</span></p><p></p><p><span>The profound practitioners of the Eternal Heaven Realm and the Burning Moon Realm clashed against one another like wild beasts. Both sides were using their sharpest fangs to tear their enemies apart.</span></p><p></p><p><span>They were fighting in the Eternal Heaven God Realm. The number of Eternal Heaven Realm profound practitioners was at least a hundred times greater than that of the Burning Moon Realm.</span></p><p><div class="text-center ads-holder ads-middle" style="margin-top: 40px; margin-bottom: 70px;"></div></p><p><span>However, Zhou Xuzi, six Guardians, and half the elders had just left to quell the incursions in the north. Meanwhile, the Burning Moon Realm had shown up with all their Moon Eaters and Burning Moon Divine Envoys.</span></p><p></p><p><span>Not only that, they had to deal with Qianye Ying&#x2019;er, the terrifying three Yama Ancestors...</span></p><p></p><p><span>&#x2026;and the Devil Master himself, Yun Che!</span></p><p></p><p><span>A terrible battle erupted across soil no one had ever dared to taint before now. So much blood was spilled that it started forming mist which covered the entire realm like clouds.</span></p><p></p><p><span>Qianye Ying&#x2019;er and Honorable Tai Yu were still fighting one another. They were both level ten Divine Masters, so the world beneath them suffered every time they clashed.</span></p><p></p><p><span>Yun Che floated into the air and stared indifferently at the sea of blood spreading swiftly beneath his feet. Then, he stretched his arms wide and muttered:</span></p><p></p><p><span>&#x201C;Calamity&#x2026; and&#x2026; Misfortune!&#x201D;</span></p><p></p><p><span>The world suddenly turned dim as darkness descended from above. A gigantic storm of darkness had appeared out of nowhere after Yun Che said those words.</span></p><p></p><p><span>At the same time, a black gleam suddenly entered the eyes of the Moon Eaters and the Burning Moon Divine Envoys.</span></p><p></p><p><span>The storm of darkness swept across all space and entered the dark profound practitioners&#x2019; bodies. The dark element it contained was so thick that it was bubbling, and it increased the Moon Eaters and the Burning Moon Divine Envoys&#x2019; auras like crazy.</span></p><p></p><p><span>In the Eternal Heaven God Realm, the Guardians were the only ones who had the strength to fight the Moon Eaters on equal footing. However, that quickly changed as the world darkened, and the Moon Eaters suddenly grew much, much stronger than before. They were immediately suppressed and thrown back in defeat.</span></p><div class="ads ads-holder ads-middle text-center"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2371791870283090"
+     data-ad-slot="8264086020"></ins><script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><p></p><p><span>The Burning Moon Divine Envoys were making quick work of the Eternal Heaven Elders as well.</span></p><p></p><p><span>&#x201C;JIEHAHAHAHA!&#x201D;</span></p><p></p><p><span>Suddenly, a crazed laugh that sounded like it came from the throat of an evil spirit pierced through all the commotion on the battlefield and into everyone&#x2019;s ears. </span></p><p></p><p><span>A crooked old man had torn apart space itself and grabbed the head of a Guardian in an iron grip. The latter had just been beaten back by Fen Daoqi when he was caught by a ghastly, claw-like hand&#x2026; the next moment, black energy poured into his head, and his whole body exploded into fleshy pieces that flew dozens of kilometers away before finally hitting the ground. It was as loud as it was cruel.</span></p><p></p><p><span>He wasn&#x2019;t the first Guardian to perish in this era, but the manner in which he had died was definitely the worst in all of the Eternal Heaven Realm&#x2019;s history.</span></p><p></p><p><span>&#x201C;Tai Huan!!&#x201D; Honorable Tai Yu shouted so loudly that blood was forming in his throat.</span></p><p></p><p><span>&#x201C;JIEHA!&#x201D;</span></p><p></p><p><span>After Yan One had made his debut, a skeletal giant at least three hundred thousand meters tall dropped down from the sky and hit the ground in one giant explosion. It was Yan Two. Where he landed, columns of darkness shot all the way to the sky, and the ground was transformed into a giant pit of hell. Hundreds of thousands of people were annihilated in an instant, and only two Eternal Heaven Elders managed to escape with just some injuries.</span></p><p></p><p><span>But they only survived half a breath longer than their brethren. A pair of black claws passed through their backs before they could do anything and tore them into pieces. The last thing they heard was Yan Two&#x2019;s strange, bloodthirsty and ecstatic laughter.</span></p><p></p><p><span>They were both level two Divine Masters, and yet they were completely powerless before the terror that was Yan Two.</span></p><p></p><p><span>Having lived in the Bone Sea of Eternal Darkness for millions of years, the three Yama Ancestors had grown so powerful that they were positively terrifying. What should&#x2019;ve been a temporary stalemate immediately turned into one-sided slaughter after they showed up.</span></p><p></p><p><span>Honorable Tai Yu dared not look away from Qianye Ying&#x2019;er for even a moment because of how powerful she was, but there was no ignoring the chokingly thick blood stench that filled his lungs or the bloodcurdling screams that pierced his heart. </span></p><p></p><p><span>Besides that, he couldn&#x2019;t understand why Qianye Ying&#x2019;er, having been crippled and robbed of her inheritance and divine power by Qianye Fantian himself, was able to grow this powerful in such a short amount of time.</span></p><p></p><p><span>Suddenly, he caught a glimpse of Yun Che from the corner of his eye.</span></p><p></p><p><span>Floating in the air, the young man was surrounded by a storm of darkness. All the devil people under his power were fighting like they were on drugs.</span></p><p></p><p><span>Bang!!</span></p><p></p><p><span>He swung the white ring in his hand at the Divine Oracle, the impact splitting the space between him and Qianye Ying&#x2019;er. Then, he backed away and charged toward Yun Che without warning.</span></p><p></p><p><span>However, he barely flew a couple of meters when a pitch-black claw suddenly appeared directly in his path. A dark, disdainful laugh from Yan Three immediately followed. &#x201C;Go back to your playground, small fry&#x2026; jiehehehe!&#x201D;</span></p><p></p><p><span>Shocked, Tai Yu tried to perform a quick turn in midair, but the claw still scratched his ribs.</span></p><p></p><p><span>BOOM&#x2014; </span></p><p></p><p><span>An explosion as black as purgatory detonated at the point of contact, and Honorable Tai Yu was sent flying away while black blood spilled through his lips.</span></p><p></p><p><span>He immediately stabilized himself and tried to charge Yun Che again. However, he froze when he noticed the world around him.</span></p><div class="ads ads-holder ads-middle text-center"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2371791870283090"
+     data-ad-slot="8264086020"></ins><script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><p></p><p><span>He was in the Eternal Heaven God Realm, one of only three king realms in the entire Eastern Divine Region. This was the sacred realm that had carried their entire history and glory since its foundation.</span></p><p></p><p><span>But wherever he looked, the only thing that entered his sight was blood-soaked ruin.</span></p><p></p><p><span>The buildings that symbolized his realm were collapsing...</span></p><p></p><p><span>His kinsmen and his disciples were screaming, crying, being torn apart, murdered and subsumed into the mountains of bones and sea of blood beneath his feet...</span></p><p></p><p><span>The last three Guardians from his family whom he shared a brotherly friendship with were being attacked by the rampaging Moon Eaters. One of them had their hands bitten off their arms, and the other one had three black holes across their body...</span></p><p></p><p><span>Pu&#x2026;</span></p><p></p><p><span>Another Guardian, a grievously injured Honorable Tai Yao was split into three pieces after a devastating swipe from Yan One&#x2026; just ten days ago, they were chatting and drinking merrily together... </span></p><p></p><p><span>&#x201C;Royal father&#x2026; royal father!! WAAAA&#x2026;&#x201D;</span></p><p></p><p><span>He heard his god emperor&#x2019;s descendants crying and screaming at the top of their lungs. He turned his eyes only to see them shredded like withered grass by the scythes of darkness while they were escaping...</span></p><p></p><p><span>No one died with an intact corpse left behind.</span></p><p></p><p><span>&#x201C;Ugh&#x2026; ah&#x2026; ah&#x2026; ah&#x2026;&#x201D; His eyes lost all color, and his complexion was as pale as a corpse&#x2019;s. Every hair, every pore on his body was shaking violently. Frozen in shock, all he could do was groan like a dying man.</span></p><p></p><p><span>A nightmare...</span></p><p></p><p><span>This had to be&#x2026; just a nightmare&#x2026;</span></p><p></p><p><span>Yun Che lowered his arm and withdrew Calamity and Misfortune&#x2026; because it was no longer necessary.</span></p><p></p><p><span>Without glancing even once at Honorable Tai Yu, he dashed toward the Conferred God Stage.</span></p><p></p><p><span>Once, he had made his name on this stage. Once, it had even made him proud, and filled him with yearning.</span></p><p></p><p><span>Above the Conferred God Stage, he circulated the Laws of Nothingness before unleashing his darkness profound energy. The silent profound formation started glowing and expanding in the sky.</span></p><p></p><p><span>At the same time, star tablets from every corner of the Eastern Divine Region started glowing faintly with light.</span></p><p></p><p><span>It was the great projection formation the Eternal Heaven Realm had set up for the Profound God Convention a long time ago.</span></p><p></p><p><span>&#x201C;Heh.&#x201D; Yun Che let out a low chuckle as he pushed the great projection formation slowly into the sky. He muttered, &#x201C;It would be a huge shame to miss such a fantastic show, don&#x2019;t you agree, Old Dog Eternal Heaven?&#x201D;</span></p><p></p><div  align="left">
+If you find any errors ( broken links, non-standard content, etc.. ), Please let us know < report chapter > so we can fix it as soon as possible. </div></div><hr class="chapter-end"><div class="chapter-nav" id="chapter-nav-top"><div class="btn-group"><a class="btn btn-success" href="/against-the-gods/chapter-1720-blood-soaked-eternal-heaven-2.html"
+           title="Chapter 1720 - Blood-soaked Eternal Heaven (2)"
+           id="prev_chap"><span class="glyphicon glyphicon-chevron-left"></span><span class="hidden-xs">Prev Chapter</span></a><button type="button" class="btn btn-success chapter_jump"><span class="glyphicon glyphicon-list-alt"></span></button><a class="btn btn-success" disabled id="next_chap"><span class="hidden-xs">Next Chapter</span><span class="glyphicon glyphicon-chevron-right"></span></a></div></div><div class="text-center"><button type="button" class="btn btn-warning" id="chapter_error" data-chapter-id="896061"><span class="glyphicon glyphicon-exclamation-sign"></span> Report chapter
+    </button><!--    <button type="button" class="btn btn-info" id="chapter_comment">--><!--        <span class="glyphicon glyphicon-comment"></span> Comment--><!--    </button>--></div><div class="bg-info text-center visible-md visible-lg box-notice">
+    Tip: You can use left, right, A and D keyboard keys to browse between chapters.
+</div><div class="col-xs-12"></div><div align="center" style="padding-top:15px"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- full thich ung --><ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2371791870283090"
+     data-ad-slot="2009706278"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins><script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div></div></main><footer class="footer"><div class="container"><div class="hidden-xs col-sm-5"><p>
+	&copy; Copyright WoNovel.Com. All Rights Reserved.</p></div><ul class="col-xs-12 col-sm-7 list-unstyled"><li class="text-right pull-right"><a href="/contact" title="Contact">Contact</a> -
+                    <a href="/tos" title="ToS">ToS</a> -
+                    <a href="/sitemap.xml" target="_blank">Sitemap</a><a
+                        class="backtop" href="#" rel="nofollow" title=""><span
+                            class="glyphicon glyphicon-upload"></span></a></li></ul></div></footer></div></body><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-101484867-2"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-101484867-2');
+</script></html>
